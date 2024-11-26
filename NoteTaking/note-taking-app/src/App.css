@@ -1,0 +1,183 @@
+/* General App Styling */
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevent horizontal scrollbars */
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Resizable Divider */
+.divider {
+  background-color: #444;
+  cursor: col-resize;
+  width: 5px;
+  transition: background-color 0.3s;
+}
+
+.divider:hover {
+  background-color: #888;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 20%;
+  min-width: 220px;
+  max-width: 300px;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+  box-sizing: border-box;
+}
+
+.sidebar h3, .sidebar h4 {
+  color: #d4d4d4;
+  margin-bottom: 1rem;
+}
+
+.folder-list, .note-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.folder-item {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #d4d4d4;
+}
+
+.folder-item:hover,
+.folder-item:focus {
+  background: none; /* Prevent highlighting */
+  color: #d4d4d4; /* Keep default text color */
+}
+
+.folder-item span {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.folder-item span::before {
+  content: "";
+  margin-right: 0.5rem;
+}
+
+.subfolder {
+  margin-left: 1rem;
+}
+
+.selected-folder {
+  font-weight: bold;
+  color: #a9d0f5;
+}
+
+.delete-folder-btn {
+  background-color: #e81123;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.new-folder-input {
+  width: calc(100% - 1rem);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+
+.add-folder-btn, .add-note-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f3d0b9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+/* Note Editor Styling */
+.note-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #1e1e1e;
+}
+
+.note-editor h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #d4d4d4;
+}
+
+textarea {
+  resize: both; /* Allow resizing */
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  min-height: 150px;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.note-editor .delete-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e81123;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  align-self: flex-end;
+}
+
+/* Indentation Buttons */
+.indent-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -40px;
+}
+
+.indent-buttons button {
+  background-color: #ebc69d;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.indent-buttons button:hover {
+  background-color: #f3e5c7;
+}
+
+.note-item {
+  color: #cf6d34; /* Blue text */
+  text-decoration: underline; /* Underline style */
+  cursor: pointer; /* Pointer cursor for clickable items */
+}
+
+.note-item:hover {
+  color: #b93703; /* Darker blue when hovered */
+  text-decoration: none; /* Remove underline on hover */
+}
